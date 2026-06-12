@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. ANIMATED COUNTERS (Statistics Section)
     const counters = document.querySelectorAll('.counter');
-    const speed = 100;
+    const speed = 200;
 
     const counterObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
