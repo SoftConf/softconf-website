@@ -6,34 +6,30 @@
     <meta name="description" content="SoftConf - We organize high quality conferences and tech events like Devoxx Greece and Voxxed Days Thessaloniki.">
     <title>SoftConf | Tech Conference Organizers</title>
 
-    <link rel="icon" type="image/png" href="./assets/logo-small.png?v=2">
+    <link rel="icon" type="image/png" href="./assets/logo.png?v=2">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<header id="header" class="glass-header">
-    <div class="container nav-container">
-        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-            <img src="./assets/logo-small.png" alt="SoftConf Logo" style="height: 35px; width: auto; border-radius: 0; display: inline-block;">
-            <span style="font-family: 'Space Mono', monospace; font-weight: 700; color: var(--secondary);">&lt;/SoftConf&gt;</span>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#gallery">Photo Gallery</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact" class="btn-primary-small">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+<header>
+    <div class="nav-container container">
+
+        <a href="index.html" class="logo-link">
+            <img src="assets/logo.png" alt="SoftConf Logo" class="header-logo-img">
+        </a>
+
+        <nav class="nav-links">
+            <a href="#past-events">Events</a>
+            <a href="#services">Services</a>
+            <a href="#team">Team</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="gallery.html">Photo Gallery</a>
+            <a href="#news">News</a>
+            <a href="#contact" class="btn-primary-small">Contact</a>
         </nav>
+
     </div>
 </header>
 
@@ -50,15 +46,19 @@
 <section id="stats" class="bg-secondary">
     <div class="container stats-container fade-in">
         <div class="stat-box">
-            <h2 class="counter" data-target="22">0</h2>
+            <h2 class="counter" data-target="16">0</h2>
             <p>Conferences</p>
         </div>
         <div class="stat-box">
-            <h2 class="counter" data-target="20000">0</h2>
+            <div style="display: flex; justify-content: center; align-items: baseline;">
+                <h2 class="counter" data-target="15000">0</h2><h2 style="margin-left: 5px;">+</h2>
+            </div>
             <p>Total Participants</p>
         </div>
         <div class="stat-box">
-            <h2 class="counter" data-target="1000">0</h2>
+            <div style="display: flex; justify-content: center; align-items: baseline;">
+                <h2 class="counter" data-target="750">0</h2><h2 style="margin-left: 5px;">+</h2>
+            </div>
             <p>Speakers</p>
         </div>
         <div class="stat-box">
@@ -73,7 +73,7 @@
         <div class="about-text">
             <h2>About Us</h2>
             <h3>Why Us?</h3>
-            <p>Based in Thessaloniki, Greece, SoftConf was founded in 2016 by one of the main local community leaders and ex-organizer of the Devit Conference. We are driven by community demands and are always seeking to provide the latest content and trends in the software industry.</p>
+            <p>Based in Thessaloniki, Greece, SoftConf was founded in 2016 by one of the main local community leaders. We are driven by community demands and are always seeking to provide the latest content and trends in the software industry.</p>
             <p>We are dedicated to organizing high-quality conferences, workshops, and other software development-related events such as hackathons, code retreats, and coder dojos. Additionally, our highly respected software professionals provide consulting services that aim to improve our clients' software development processes and the overall quality of their products.</p>
         </div>
         <div class="about-image">
@@ -83,7 +83,7 @@
 </section>
 
 <section id="events" class="bg-light section-padding">
-    <div class="container">
+    <div class="container" id="past-events">
         <div class="section-title fade-in">
             <h2>Events</h2>
             <p>Explore our flagship tech conferences.</p>
@@ -104,7 +104,7 @@
             <div class="card">
                 <img src="./assets/images/homepage/devoxx-upcoming.jpg" alt="Devoxx Greece">
                 <div class="card-body">
-                    <span>Spring 2027 | Megaron Athens Concert Hall</span>
+                    <span>April 15-17, 2027 | Megaron Athens Concert Hall</span>
                     <h3>Devoxx Greece 2027</h3>
                     <p>The ultimate developer community event returns to Athens. After breaking records in our past editions, we are preparing an even bigger tech celebration.</p>
                     <a href="https://devoxx.gr/" target="_blank" class="read-more">Event Website &rarr;</a>
@@ -112,52 +112,60 @@
             </div>
         </div>
 
-        <h3 class="event-category-title fade-in" style="margin-top: 50px;">Past Events & History</h3>
+        <h3 class="event-category-title fade-in" style="margin-top: 50px;">Our Conferences & History</h3>
         <div class="grid-3 fade-in">
 
             <details class="card card-past event-details">
                 <summary class="card-body">
-                    <span>4 Editions (2023 - 2026) | Athens</span>
                     <h3>Devoxx Greece History</h3>
                     <div class="click-to-read">Read the story <span>+</span></div>
                 </summary>
                 <div class="card-story">
-                    <p>What started as Voxxed Days Athens in 2017 with 450 attendees, evolved into Devoxx Greece in 2023. By 2025, it gathered a record-breaking 1,350+ delegates and 60+ global speakers. Patroklos and the team aimed to create a central tech hub featuring world-class experts, making it the largest tech event in the country.</p>
+                    <p>Officially launched in 2023, Devoxx Greece took the baton to become the ultimate flagship developer community event in the country. Gathering over 1,350+ delegates and global speakers annually at the Megaron Athens Concert Hall, it continues to push the boundaries of technology. The next highly anticipated edition is set for April 15-17, 2027.</p>
                 </div>
             </details>
 
             <details class="card card-past event-details">
                 <summary class="card-body">
-                    <span>9 Past Editions (2016 - 2025) | Thessaloniki</span>
-                    <h3>Voxxed Days SKG History</h3>
+                    <h3>Voxxed Days Athens History</h3>
                     <div class="click-to-read">Read the story <span>+</span></div>
                 </summary>
                 <div class="card-story">
-                    <p>Starting in 2016, Voxxed Days Thessaloniki has been the premier tech hub of the Balkans, consistently hosting 40+ sessions and uniting over 700 passionate developers annually. Its massive success proved the immense thirst for knowledge and innovation in Northern Greece, sparking the expansion of the events.</p>
+                    <p>The foundation of the flagship Athens events. Running successfully from 2017 to 2019 and making a grand return in 2022, Voxxed Days Athens introduced world-class tech sessions to the local community. Following its exceptional growth and record attendance, it officially evolved into Devoxx Greece starting in 2023.</p>
                 </div>
             </details>
 
             <details class="card card-past event-details">
                 <summary class="card-body">
-                    <span>2 Editions (2024 - 2025) | Ioannina</span>
+                    <h3>Voxxed Days Thessaloniki History</h3>
+                    <div class="click-to-read">Read the story <span>+</span></div>
+                </summary>
+                <div class="card-story">
+                    <p>Starting back in 2016, Voxxed Days Thessaloniki has established itself as the premier tech hub of the Balkans. Year after year, it consistently hosts dozens of specialized sessions and unites hundreds of passionate software engineers. Its long-standing success proved the immense thirst for technological innovation in Northern Greece and set the standard for all subsequent events.</p>
+                </div>
+            </details>
+
+            <details class="card card-past event-details">
+                <summary class="card-body">
                     <h3>Voxxed Days Ioannina History</h3>
                     <div class="click-to-read">Read the story <span>+</span></div>
                 </summary>
                 <div class="card-story">
-                    <p>It all began in February 2024. The rapid technological growth of Ioannina, combined with its outstanding University, made it the ideal destination. The goal is to strengthen the local tech community in Epirus, connect students with top companies, and retain brilliant engineering talent in the region.</p>
+                    <p>Voxxed Days Ioannina was introduced to capture and fuel the rapid technological ecosystem emerging in Epirus. Designed as a recurring anchor for the region's top-tier university and growing tech scene, it serves as a vital bridge connecting local talent with leading companies, ensuring that innovation thrives consistently across the regional periphery.</p>
                 </div>
             </details>
 
             <details class="card card-past event-details">
                 <summary class="card-body">
-                    <span>Started in 2025 | Heraklion</span>
                     <h3>Voxxed Days Crete History</h3>
                     <div class="click-to-read">Read the story <span>+</span></div>
                 </summary>
                 <div class="card-story">
-                    <p>The newest member of the family! Scheduled in Heraklion, it was created to connect the island's developers with the global software community. The event highlights Crete as a dynamic new tech hub, bridging academic research with the fast-paced software industry.</p>
+                    <p>Making its dynamic debut in Heraklion, Voxxed Days Crete successfully united the island's vibrant developer community with the global software landscape. By bridging academic research with advanced industry practices, this landmark event firmly anchored Crete as a strategic tech hub—leaving the door wide open for the community to reconvene and spark new ideas in the future.</p>
                 </div>
             </details>
+
+        </div>
 
         </div>
     </div>
@@ -208,7 +216,7 @@
             <div class="service-card glass-panel" style="text-align: center;">
                 <h3 style="margin-bottom: 5px;">Patroklos Papapetrou</h3>
                 <span style="color: var(--primary-light); font-weight: 600; font-size: 0.9rem;">Founder & Lead Organizer</span>
-                <p style="margin-top: 15px;">As a prominent local community leader and ex-organizer of the Devit Conference, Patroklos brings years of technical and organizational expertise. He ensures that every SoftConf event aligns perfectly with the latest trends in the software industry.</p>
+                <p style="margin-top: 15px;">As a prominent local community leader, Patroklos brings years of technical and organizational expertise. He ensures that every SoftConf event aligns perfectly with the latest trends in the software industry.</p>
             </div>
 
             <div class="service-card glass-panel" style="text-align: center;">
@@ -298,17 +306,47 @@
 
 <section id="news" class="container section-padding">
     <div class="section-title fade-in">
-        <h2>News & Updates</h2>
+        <h2>Latest News & Press Releases</h2>
+        <p>Stay updated with official announcements and post-event wrap-ups from our major conferences.</p>
     </div>
     <div class="grid-3 fade-in">
+
         <div class="card">
             <div class="card-body">
-                <span>Press Release | Devoxx 2023</span>
-                <h3>Devoxx Greece 2023 Concludes with Record Attendance</h3>
-                <p>The annual developer conference brought together over 2,000 developers, featuring 60+ international speakers discussing the future of AI, Java, and Cloud technologies...</p>
-                <a href="https://devoxx.gr/" target="_blank" class="read-more">Read Full Press Release &rarr;</a>
+                <span style="color: var(--primary-light); font-weight:700; font-size:0.85rem;">PRESS RELEASE | AFTER EVENT</span>
+                <h3 style="margin: 10px 0; color: var(--secondary); font-size: 1.4rem;">Devoxx Greece 2026 Wrap-Up</h3>
+                <p>A comprehensive look back at this year's premier conference in Athens, breaking all previous attendance records and setting new industry standards.</p>
+                <a href="press-release-devoxx.html" class="read-more">Read Full Release &rarr;</a>
             </div>
         </div>
+
+        <div class="card">
+            <div class="card-body">
+                <span style="color: var(--primary-light); font-weight:700; font-size:0.85rem;">PRESS RELEASE | AFTER EVENT</span>
+                <h3 style="margin: 10px 0; color: var(--secondary); font-size: 1.4rem;">Voxxed Days Crete: A Huge Success</h3>
+                <p>Highlights and key takeaways from our highly successful inaugural tech event held in Heraklion, Crete, this past September.</p>
+                <a href="press-release-crete.html" class="read-more">Read Full Release &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <span style="color: var(--primary-light); font-weight:700; font-size:0.85rem;">PRESS RELEASE | AFTER EVENT</span>
+                <h3 style="margin: 10px 0; color: var(--secondary); font-size: 1.4rem;">Voxxed Days Thessaloniki 2025</h3>
+                <p>Recapping the excitement, insights, and community spirit from the leading tech hub of the Balkans in Northern Greece.</p>
+                <a href="press-release-thessaloniki.html" class="read-more">Read Full Release &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <span style="color: var(--primary-light); font-weight:700; font-size:0.85rem;">PRESS RELEASE | AFTER EVENT</span>
+                <h3 style="margin: 10px 0; color: var(--secondary); font-size: 1.4rem;">Voxxed Days Ioannina 2024</h3>
+                <p>Discover how our first edition in Epirus successfully bridged the gap between the academic community and the fast-paced tech industry.</p>
+                <a href="press-release-ioannina.html" class="read-more">Read Full Release &rarr;</a>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -333,16 +371,13 @@
 
 <footer class="site-footer">
     <div class="container footer-grid">
+
         <div class="footer-col brand-col">
-            <div class="footer-logo-box">
-                <img src="./assets/logo-small.png" alt="SoftConf Logo" class="footer-logo-img">
-                <span class="footer-logo-text">&lt;/SoftConf&gt;</span>
-            </div>
             <p class="footer-tagline">High Quality Events. Endless Technical Networking.</p>
 
             <div class="footer-socials">
                 <a href="https://www.linkedin.com/company/softconf/" target="_blank" rel="noopener noreferrer">
-                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
@@ -351,43 +386,44 @@
                 </a>
 
                 <a href="https://www.facebook.com/softconf/" target="_blank" rel="noopener noreferrer">
-                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                     </svg>
                     <span>Follow us on Facebook</span>
                 </a>
 
                 <a href="https://x.com/softconf" target="_blank" rel="noopener noreferrer">
-                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
                         <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
                     </svg>
                     <span>Follow us on X</span>
                 </a>
             </div>
-
         </div>
+
         <div class="footer-col links-col">
             <h4>Quick Links</h4>
             <ul class="footer-links-list">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Team</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#team">Team</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </div>
+
         <div class="footer-col contact-col">
             <h4>Inquiries</h4>
             <p>Want to partner or join us as a sponsor?</p>
             <a href="mailto:info@softconf.eu" class="footer-email-link">info@softconf.eu</a>
         </div>
+
     </div>
     <div class="footer-bottom">
         <p>&copy; 2026 SoftConf. All Rights Reserved. Designed by SoftConf Team.</p>
     </div>
 </footer>
-
 <div id="cookie-banner" class="cookie-banner">
     <p>We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies.</p>
     <div class="cookie-buttons">

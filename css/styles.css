@@ -45,7 +45,20 @@ li { list-style: none; }
 
 header { position: fixed; top: 0; width: 100%; z-index: 1000; transition: var(--transition); padding: 20px 0; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
+
+/* --- Λογότυπο --- */
 .logo { font-family: 'Space Mono', monospace; font-size: 1.8rem; font-weight: 700; color: var(--secondary); letter-spacing: -1px; }
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    margin-left: -20px;
+    transition: transform var(--transition);
+}
+.logo-link:hover {
+    transform: scale(1.05);
+}
 
 .nav-links { display: none; }
 @media (min-width: 992px) {
@@ -113,22 +126,31 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; transition: var(--
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-light); }
 
 /* --- FOOTER & LINKEDIN STYLING --- */
-.site-footer { background-color: var(--secondary); color: #e2e8f0; padding: 70px 0 30px 0; font-size: 0.95rem; border-top: 3px solid var(--primary-light); }
+.site-footer {
+    background-color: var(--secondary);
+    color: #e2e8f0;
+    padding: 40px 0 30px 0;
+    font-size: 0.95rem;
+    border-top: 3px solid var(--primary-light);
+}
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; padding-bottom: 40px; }
 @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
 .footer-col h4 { color: var(--white); font-size: 1.2rem; font-weight: 600; margin-bottom: 25px; position: relative; }
 .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 35px; height: 2px; background-color: var(--primary-lighter); }
-.footer-logo-box { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-.footer-logo-img { height: 40px; width: auto; border-radius: 0 !important; }
-.footer-logo-text { font-family: 'Space Mono', monospace; font-size: 1.9rem; font-weight: 700; color: var(--white); letter-spacing: -1px; }
-.footer-tagline { color: #94a3b8; max-width: 320px; font-size: 0.9rem; }
 
-/* --- Social Media Footer Styles --- */
+.brand-col .footer-tagline {
+    color: #94a3b8;
+    max-width: 320px;
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+
+/* --- ΕΔΩ ΕΙΝΑΙ Η ΔΙΟΡΘΩΣΗ ΓΙΑ ΤΑ SOCIAL (ΤΟ ΕΝΑ ΚΑΤΩ ΑΠΟ ΤΟ ΑΛΛΟ) --- */
 .footer-socials {
     margin-top: 25px;
-    display: flex !important;
-    flex-direction: column !important;    /* Αναγκαστικά κάθετα */
-    align-items: flex-start !important;   /* Τα στοιχίζει ωραία στα αριστερά */
+    display: flex;
+    flex-direction: column; /* Αυτό τα βάζει το ένα κάτω από το άλλο */
+    align-items: flex-start;
     gap: 15px;
 }
 
@@ -136,11 +158,25 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; transition: var(--
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--primary-lighter, #a0c4ff);
+    color: var(--primary-lighter);
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
+
+.footer-socials a:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.footer-socials svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    fill: none;
+    flex-shrink: 0;
+}
+
 .footer-links-list li { margin-bottom: 12px; }
 .footer-links-list a { color: #cbd5e1; transition: var(--transition); }
 .footer-links-list a:hover { color: var(--primary-lighter); padding-left: 5px; }
@@ -148,17 +184,16 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; transition: var(--
 .footer-email-link:hover { color: var(--white); text-decoration: underline; }
 .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #64748b; font-size: 0.85rem; }
 
+/* --- ANIMATIONS & UTILITIES --- */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .fade-in.appear { opacity: 1; transform: translateY(0); }
 
-/* --- LIGHTBOX MODAL EFFECT (ZOOM) --- */
 .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
 .lightbox-content { max-width: 90%; max-height: 90vh; border-radius: 8px; box-shadow: 0 5px 25px rgba(0,0,0,0.5); animation: zoomIn 0.3s ease; }
 .close-lightbox { position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.3s; }
 .close-lightbox:hover { color: var(--primary-lighter); }
 @keyframes zoomIn { from {transform: scale(0.8); opacity: 0;} to {transform: scale(1); opacity: 1;} }
 
-/* --- GDPR COOKIE BANNER CSS --- */
 .cookie-banner {
     position: fixed; bottom: -150px; left: 0; width: 100%;
     background: #ffffff; color: var(--secondary); padding: 20px;
@@ -173,54 +208,21 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; transition: var(--
 }
 .cookie-buttons { display: flex; gap: 10px; }
 
-/* --- Click-to-Expand Effects for Cards --- */
-.event-details {
-    cursor: pointer;
-    overflow: hidden;
-}
-
-/* Εδώ είναι το μυστικό για να φύγει το τριγωνάκι και να στρώσει η κάρτα */
-.event-details summary {
-    list-style: none !important;
-    outline: none;
-    cursor: pointer;
-    display: block !important;
-}
-
-.event-details summary::-webkit-details-marker {
-    display: none !important;
-}
-
+/* --- ACCORDION (PAST EVENTS) --- */
+.event-details { cursor: pointer; overflow: hidden; }
+.event-details summary { list-style: none !important; outline: none; cursor: pointer; display: block !important; }
+.event-details summary::-webkit-details-marker { display: none !important; }
 .click-to-read {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: var(--primary-light);
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 15px;
+    margin-top: 15px; font-size: 0.9rem; color: var(--primary-light); font-weight: 700;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid #e2e8f0; padding-top: 15px;
 }
-
-.click-to-read span {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-.event-details[open] .click-to-read span {
-    transform: rotate(45deg);
-    color: #e74c3c;
-}
-
+.click-to-read span { font-size: 1.5rem; transition: transform 0.3s ease; }
+.event-details[open] .click-to-read span { transform: rotate(45deg); color: #e74c3c; }
 .card-story {
-    padding: 0 25px 25px 25px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--secondary);
-    animation: slideDown 0.3s ease-out forwards;
+    padding: 0 25px 25px 25px; font-size: 0.95rem; line-height: 1.6;
+    color: var(--secondary); animation: slideDown 0.3s ease-out forwards;
 }
-
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
